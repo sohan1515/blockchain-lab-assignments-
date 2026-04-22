@@ -1,0 +1,31 @@
+{
+  "name": "polygon-deployment-assignment-2",
+  "version": "1.0.0",
+  "description": "Assignment 2: Polygon Deployment using Hardhat and Solidity",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "deploy": "hardhat run scripts/deploy.js --network polygonMumbai",
+    "test": "hardhat test",
+    "clean": "hardhat clean",
+    "verify": "hardhat etherscan-verify"
+  },
+  "keywords": [
+    "blockchain",
+    "polygon",
+    "hardhat",
+    "solidity",
+    "smart-contract"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "dotenv": "^16.3.1",
+    "hardhat": "^2.28.6"
+  },
+  "dependencies": {
+    "ethers": "^6.10.0"
+  },
+  "type": "commonjs"
+}

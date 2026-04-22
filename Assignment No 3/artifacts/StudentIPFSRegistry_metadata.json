@@ -1,0 +1,232 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "AlreadySubmitted",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "EmptyCid",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "EmptyStudentId",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "index",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "studentId",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "cid",
+						"type": "string"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "studentWallet",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "SubmissionStored",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "getAllSubmissions",
+				"outputs": [
+					{
+						"internalType": "string[]",
+						"name": "studentIds",
+						"type": "string[]"
+					},
+					{
+						"internalType": "string[]",
+						"name": "cids",
+						"type": "string[]"
+					},
+					{
+						"internalType": "address[]",
+						"name": "wallets",
+						"type": "address[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "timestamps",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "index",
+						"type": "uint256"
+					}
+				],
+				"name": "getSubmission",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "studentId",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "cid",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "studentWallet",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "hasSubmitted",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "studentId",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "cid",
+						"type": "string"
+					}
+				],
+				"name": "submitSubmission",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "totalSubmissions",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"submitSubmission(string,string)": {
+					"params": {
+						"cid": "IPFS CID of the uploaded report",
+						"studentId": "Your college roll number / PRN / assigned ID"
+					}
+				}
+			},
+			"title": "StudentIPFSRegistry",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"getAllSubmissions()": {
+					"notice": "Return all submission data in arrays for easy viewing"
+				},
+				"getSubmission(uint256)": {
+					"notice": "Read a submission by index"
+				},
+				"submitSubmission(string,string)": {
+					"notice": "Submit your final report CID once from your wallet"
+				},
+				"totalSubmissions()": {
+					"notice": "Total number of submissions stored"
+				}
+			},
+			"notice": "Stores one IPFS CID per student wallet on Sepolia for classroom verification",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"new.sol": "StudentIPFSRegistry"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"new.sol": {
+			"keccak256": "0xebbdb22d4c688c6654429fb2ddd56267a9e3b3aebecbed7733cdc905f45c020a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7975424fe7ba11ddfbc08191db1e6f19d35d0d66578b6885e2e43b9bd90104ff",
+				"dweb:/ipfs/Qme75M25H5JLu14376nBi7m6nj1JtK2jzWcoWKRYKuNn1s"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,14 @@
+{
+  "name": "assignment-4-backend",
+  "version": "1.0.0",
+  "description": "IPFS Integration Backend for Assignment 4",
+  "main": "upload.js",
+  "scripts": {
+    "start": "node upload.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "multer": "^1.4.5-lts.1",
+    "ipfs-http-client": "^56.0.3"
+  }
+}

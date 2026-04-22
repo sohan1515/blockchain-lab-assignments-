@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Environment variables (KEEP YOUR SECRETS SAFE!)
+.env
+
+# Hardhat artifacts
+artifacts/
+cache/
+
+# TypeChain
+typechain/
+typechain-types/
+
+# Coverage
+coverage/
+coverage.json
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test files
+test/
+*.test.js
